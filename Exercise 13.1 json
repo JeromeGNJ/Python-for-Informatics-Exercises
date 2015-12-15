@@ -1,0 +1,29 @@
+import urllib
+import json
+
+serviceurl = 'http://maps.googleapis.com/maps/api/geocode/json?'
+
+while True:
+    address = raw_input('Enter location: ')
+    if len(address) < 1 : break
+
+    url = serviceurl + urllib.urlencode({'sensor':'false', 'address': address})
+    uh = urllib.urlopen(url)
+    data = uh.read()
+
+    try: js = json.loads(str(data))
+    except: js = None
+    if 'status' not in js or js['status'] != 'OK':
+        print '==== Failure To Retrieve ===='
+        continue
+
+    results = js['results'][0]
+    address_components = results["address_components"]
+
+    for each_dict in address_components:
+        types = each_dict["types"]
+
+    if types == ["country", "political"]:
+            print "Country Code is ", each_dict["short_name"]
+    else:
+            print "Country Code is not found"
