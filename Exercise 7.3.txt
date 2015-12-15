@@ -1,0 +1,12 @@
+try:
+    c = 0
+    file = input("Enter File : ")
+    if file=="na na boo boo": 
+         print("NA NA BOO BOO TO YOU - You have been punk'd!") 
+    else:
+        fhand = open(file)
+        for line in fhand:
+            c+=1
+        print("There were",c,"subject lines in",file)
+except:
+    print("File cannot be opened : ",file)

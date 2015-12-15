@@ -1,0 +1,12 @@
+import urllib.request as ur
+
+url = input('Enter URL : ')
+#url = 'http://www.py4inf.com/code/romeo.txt'
+fhand = ur.urlopen(url)
+
+display = fhand.read()
+print(display[:3001])
+c=0
+for i in display:
+    c+=1
+print(c)    

@@ -1,0 +1,10 @@
+fhand = open((input("Enter File : ")))
+words = {}
+for line in fhand:
+    line = line.split()
+    for word in line:
+        if word not in words: 
+            words[word]=1
+find = input("Enter a string : ")
+if find in words:
+    print(find,"string is in the file.")

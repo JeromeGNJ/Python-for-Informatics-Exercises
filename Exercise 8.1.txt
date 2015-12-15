@@ -1,0 +1,15 @@
+def chop(x):
+    del x[0]
+    del x[-1]
+    return None
+
+def middle(x):
+    return x[1:-1]
+
+lst=[1,2,3,4,5]
+
+newlst = middle(lst)
+print(newlst)
+
+chop(lst)
+print(lst)

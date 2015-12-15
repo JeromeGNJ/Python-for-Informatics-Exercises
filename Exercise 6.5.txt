@@ -1,0 +1,6 @@
+str = 'X-DSPAM-Confidence: 0.8475'
+index = str.find(":")
+index+=1
+num = str[index:]
+float(num)
+print(num)

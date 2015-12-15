@@ -1,0 +1,4 @@
+fhand = open((input("Enter a Filename : ")))
+for line in fhand:
+    line = line.upper()
+    print(line)

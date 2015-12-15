@@ -1,0 +1,8 @@
+import re
+fhand = open((input("Enter File : "))).read()
+d = {}
+word = re.findall("From.+?(\d\d)[:](\d\d)[:]\d\d",fhand)
+
+word.sort()
+for h,m in word:
+    print(h,m)

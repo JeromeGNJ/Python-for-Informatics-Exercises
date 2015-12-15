@@ -1,0 +1,19 @@
+import re
+fhand = open((input("Enter File : "))).read()
+d = {}
+word = re.findall("From.+?([\w.]+@[a-zA-Z.]+)",fhand)
+
+for i in word:
+    if i in d:
+        d[i]+=1
+    else:
+        d[i]=1
+t = list()
+
+for key,val in d.items():
+    t.append((val,key))
+t.sort(reverse=True)
+m = list()
+for val,key in t:
+    m.append((key,val))
+print(m[0])

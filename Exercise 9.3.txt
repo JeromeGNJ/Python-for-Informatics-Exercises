@@ -1,0 +1,11 @@
+import re
+fhand = open((input("Enter File : "))).read()
+d = dict()
+words = re.findall("(\S+@\S+)",fhand)
+
+for i in words:
+    if i in d:
+        d[i]+=1
+    else:
+        d[i]=1
+print(d)

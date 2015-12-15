@@ -1,0 +1,12 @@
+from bs4 import BeautifulSoup
+import urllib.request as ur
+
+url = input('Enter URL : ')
+# url http://www.dr-chuck.com/page1.htm
+html = ur.urlopen(url).read()
+soup = BeautifulSoup(html)
+tags = soup('p')
+c = 0
+for tag in tags:
+    c+=1
+print(c)

@@ -1,0 +1,15 @@
+def computepay(int1,int2):
+    try: 
+        h = float(int1)
+        r = float(int2)
+    except:
+        print ("Error, please enter a numeric input")
+        quit()
+    if h >= 40:
+        pay1 = 40 * r + (h - 40) * r * 1.5
+
+        print(pay1)
+    else:
+        pay2 = h * r
+        print( pay2)
+computepay(45,10)

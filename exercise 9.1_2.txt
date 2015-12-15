@@ -1,0 +1,8 @@
+s = {}
+while 1:
+    n = input("Enter a String : ")
+    if n=="done":break
+    s[n]=n
+f = input("Enter the string to search : ")
+if f in s.keys():
+    print(f,"is present in the Dictionary.")

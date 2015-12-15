@@ -1,0 +1,7 @@
+lst = list()
+while 1:
+    n = input("Enter a Number: ")
+    if n=="done": break
+    lst.append(float(n))
+print("Maximum : ",max(lst))
+print("Minimum : ",min(lst))

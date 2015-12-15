@@ -1,0 +1,8 @@
+def count(w,l):
+    count = 0
+    for letter in w:
+        if letter == l:
+            count = count + 1
+    print (count)
+    
+count("banana",'a')

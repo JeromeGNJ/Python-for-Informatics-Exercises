@@ -1,0 +1,13 @@
+t = list()
+while 1:
+    try :
+        n = input("Enter a Number : ")
+        if n=="done": break
+        n = float(n)
+        t.append(n)
+    except:
+        print("Bad Data")
+        continue
+print("Total : ",sum(t))
+print("Count : ",len(t))
+print("Average :",(sum(t)/(len(t)-1)))

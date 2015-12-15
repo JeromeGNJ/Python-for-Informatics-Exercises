@@ -1,0 +1,12 @@
+fhand = open((input("Enter File : ")))
+d = {}
+for line in fhand:
+    if line.startswith("From"):
+        line = line.split()
+        if len(line)>2:
+            day = line[2]
+            if day in d:
+                d[day]+=1
+            else:
+                d[day]=1
+print(d)

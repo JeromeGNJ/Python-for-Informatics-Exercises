@@ -1,0 +1,6 @@
+def cpay():
+    h = float(input("Enter Hour : "))
+    r = float(input("Enter Rate : "))
+    if h>40:
+        r = h * r + (h-40) * r
+    print("Pay : ",(h*r))

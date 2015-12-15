@@ -1,0 +1,16 @@
+import re 
+
+fhand=open("m").read()
+l = re.findall("[a-z]",fhand)
+d = {}
+for i in l:
+    if i in d:
+        d[i]+=1
+    else:
+        d[i]=1
+t= list()
+for key,val in d.items():
+    t.append((val,key))
+t.sort(reverse=True)
+for val,key in t:
+    print(key,val)

@@ -1,0 +1,9 @@
+import re 
+
+r = input("Enter a Regular Expression : ")
+fhand = open("mbox.txt").read()
+s = re.findall(r,fhand)
+c = 0
+for i in s:
+    c +=1
+print("mbox.txt had",c,"lines that matched",r)
