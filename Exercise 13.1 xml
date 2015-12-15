@@ -1,0 +1,20 @@
+import urllib
+import xml.etree.ElementTree as ET
+
+serviceurl = 'http://maps.googleapis.com/maps/api/geocode/xml?'
+
+while True:
+    address = raw_input('Enter location: ')
+    if len(address) < 1 : break
+
+    url = serviceurl + urllib.urlencode({'sensor':'false', 'address': address})
+    
+    uh = urllib.urlopen(url)
+    data = uh.read()
+    tree = ET.fromstring(data)
+
+
+    results = tree.findall('result')
+    try: print "Country code : ",results[0][3].find('short_name').text
+    except: print("Not Found") 
+   
